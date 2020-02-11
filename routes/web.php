@@ -21,3 +21,6 @@
   Route::get('/home', 'HomeController@index')->name('home');
   Route::post('category/store', 'CategoryController@store')->name('category.store');
   Route::get('categories', 'CategoryController@index')->name('category.index');
+  Route::get('/team/{team}', 'TeamController@show')->name('team.show');
+  Route::get('/post/{post}', 'PostController@show')->name('post.show');
+  Route::get('/video/{video}', 'VideoController@show')->name('video.show');

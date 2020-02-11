@@ -15,7 +15,7 @@
      * @var array
      */
     protected $fillable = [
-      'name', 'email', 'password',
+      'name', 'email', 'password', 'team_id'
     ];
     
     /**
@@ -39,5 +39,15 @@
     public function categories()
     {
       return $this->hasMany(Category::class);
+    }
+  
+    public function goals()
+    {
+      return $this->hasMany(Goal::class);
+    }
+  
+    public function team()
+    {
+      return $this->belongsTo(Team::class);
     }
   }
